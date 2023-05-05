@@ -8,9 +8,15 @@ USE pickup_games;
 CREATE TABLE IF NOT EXISTS Fields (
    Name VARCHAR(255) PRIMARY KEY,
    Address VARCHAR(255),
-   Size INT,
    Turf BOOL,
    Outdoor BOOL
+);
+-- Create the Employee table
+CREATE TABLE IF NOT EXISTS Employees (
+   SIN INT AUTO_INCREMENT UNIQUE PRIMARY KEY,
+   Full_name VARCHAR(255),
+   Address VARCHAR(255),
+   Position VARCHAR(255) CHECK (Position in ("Referee"))
 );
 
 -- Create the Games table
@@ -21,20 +27,11 @@ CREATE TABLE IF NOT EXISTS Games (
    Price DECIMAL(10,2),
    Length_of_Game INT,
    Field_Name VARCHAR(255),
+   Employee_SIN INT,
+   FOREIGN KEY (Employee_SIN) REFERENCES Employees(SIN) ON UPDATE CASCADE ON DELETE CASCADE,
    FOREIGN KEY (Field_Name) REFERENCES Fields(Name) ON UPDATE CASCADE ON DELETE CASCADE
 );
 
-
--- Create the Employee table
-CREATE TABLE IF NOT EXISTS Employees (
-   SIN INT AUTO_INCREMENT UNIQUE PRIMARY KEY,
-   Full_name VARCHAR(255),
-   Address VARCHAR(255),
-   Position VARCHAR(255) CHECK (Position in ("Referee")),
-   Game_ID INT,
---   Field_Name INT,
-   FOREIGN KEY (Game_ID) REFERENCES Games(Game_ID) ON UPDATE CASCADE ON DELETE CASCADE
-);
 
 -- Create the Player table
 CREATE TABLE IF NOT EXISTS Players (
