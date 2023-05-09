@@ -12,7 +12,8 @@ VALUES ("Richcraft Soccer Field Kanata", "4101 Innovation Drive", TRUE, TRUE),
 	("Kanata Bell Sensplex", "1565 Maple Grove Road", TRUE, FALSE),
 	("OZ Dome", "221 Westbrook Road", TRUE, FALSE),
 	("Thunderbird Sports Centre Dome", "1927 Richardson Side Road", TRUE, FALSE);
-   
+
+-- Populate Employees   
 INSERT INTO Employees (Full_Name, Address, Position)
 VALUES ("Andrew Saxx", "773 Bird Street", "Referee"),
 		("Bob Sterling", "3649 Quiet Valley Lane", "Referee"),
@@ -24,9 +25,46 @@ VALUES ("Andrew Saxx", "773 Bird Street", "Referee"),
         ("Isa Phillips", "956 Polk Street", "Referee"),
         ("Khaled Zeydan", "1679 Marie Street", "Referee"),
         ("Ryan Sacks", "3109 Rockwell Lane", "Referee");
-        
-INSERT INTO Games (Date, Time, Price, Length_of_Game, Field_Name)
-VALUES ()
+	
+-- Populate Games
+INSERT INTO Games (Date, Time, Price, Length_of_Game, Field_Name, Employee_SIN)
+VALUES 
+    ('2023-06-04', '7:00pm', 25.00, 90, 'Richcraft Soccer Field Kanata', 100000000),
+    ('2023-06-07', '7:00pm', 35.00, 90, "Immaculata High School Soccer Field", 100000001),
+    ('2023-06-10', '7:00pm', 16.00, 90, "Walter Baker Soccer Field", 100000002),
+    ('2023-06-11', '7:00pm', 25.00, 90, "W.C. Bowes Soccer Field", 100000003),
+    ('2023-06-14', '7:00pm', 24.00, 90, "Insmill Park Soccer Field", 100000004),
+    ('2023-06-17', '7:00pm', 19.00, 90, "Ben Franklin Dome Nepean", 100000005),
+    ('2023-06-19', '7:00pm', 24.00, 90, "Sooners Megadome", 100000006),
+    ('2023-06-22', '7:00pm', 23.00, 90, "Kanata Bell Sensplex", 100000007),
+    ('2023-06-27', '7:00pm', 26.00, 90, "OZ Dome", 100000008),
+    ('2023-06-29', '7:00pm', 27.00, 90, "Thunderbird Sports Centre Dome", 100000009),
+    ('2023-07-02', '7:00pm', 25.00, 90, 'Richcraft Soccer Field Kanata', 100000000),
+    ('2023-07-05', '7:00pm', 28.00, 90, "Immaculata High School Soccer Field", 100000001),
+    ('2023-07-08', '7:00pm', 25.00, 90, "Walter Baker Soccer Field", 100000002),
+    ('2023-07-09', '7:00pm', 36.00, 90, "W.C. Bowes Soccer Field", 100000003),
+    ('2023-07-12', '7:00pm', 24.00, 90, "Insmill Park Soccer Field", 100000004),
+    ('2023-07-15', '7:00pm', 36.00, 90, "Ben Franklin Dome Nepean", 100000005),
+    ('2023-07-17', '7:00pm', 23.00, 90, "Sooners Megadome", 100000006),
+    ('2023-07-20', '7:00pm', 20.00, 90, "Kanata Bell Sensplex", 100000007),
+    ('2023-07-25', '7:00pm', 23.00, 90, "OZ Dome", 100000008),
+    ('2023-07-28', '7:00pm', 27.00, 90, "Thunderbird Sports Centre Dome", 100000009),
+    ('2023-07-30', '7:00pm', 29.00, 90, 'Richcraft Soccer Field Kanata', 100000000),
+    ('2023-08-02', '7:00pm', 14.00, 90, "Immaculata High School Soccer Field", 100000001),
+    ('2023-08-05', '7:00pm', 16.00, 90, "Walter Baker Soccer Field", 100000002),
+    ('2023-08-06', '7:00pm', 18.00, 90, "W.C. Bowes Soccer Field", 100000003),
+    ('2023-08-09', '7:00pm', 26.00, 90, "Insmill Park Soccer Field", 100000004),
+    ('2023-08-12', '7:00pm', 20.00, 90, "Ben Franklin Dome Nepean", 100000005),
+    ('2023-08-14', '7:00pm', 21.00, 90, "Sooners Megadome", 100000006),
+    ('2023-08-17', '7:00pm', 23.00, 90, "Kanata Bell Sensplex", 100000007),
+    ('2023-08-22', '7:00pm', 25.00, 90, "OZ Dome", 100000008),
+    ('2023-08-25', '7:00pm', 28.00, 90, "Thunderbird Sports Centre Dome", 100000009);
+
+SELECT * FROM Games
+
+-- Populate Games        
+-- INSERT INTO Games (Date, Time, Price, Length_of_Game, Field_Name)
+-- VALUES ()
 
 -- INSERT INTO Games (Date, Time, Price, Length_of_Game, Field_Name)
 -- SELECT
